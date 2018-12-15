@@ -8,6 +8,6 @@ const Container = styled.section`
   h2 {
     margin-bottom: 40px;
   }
-`;
+`
 
-export default Container;
+export default Container

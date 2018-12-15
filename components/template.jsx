@@ -9,12 +9,14 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    font-family: Arial;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
-    background-color: #363546;
+    background-color: #000;
   }
 `
 
@@ -27,6 +29,6 @@ const Template = ({ children, headOptions }) => (
 
     {children}
   </>
-);
+)
 
 export default Template

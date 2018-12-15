@@ -8,7 +8,7 @@ import Menu from './menu'
 const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
-`;
+`
 
 const Header = () => (
   <Container>
@@ -17,6 +17,6 @@ const Header = () => (
       <Menu />
     </HeaderStyled>
   </Container>
-);
+)
 
 export default Header

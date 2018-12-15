@@ -13,7 +13,11 @@
     "styled-components": "^4.1.2"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.9.4"
+    "@zeit/next-css": "^1.0.1",
+    "babel-plugin-styled-components": "^1.9.4",
+    "prettier": "1.15.3",
+    "prettierrc": "0.0.0-5",
+    "url-loader": "^1.1.2"
   },
   "license": "ISC"
 }
