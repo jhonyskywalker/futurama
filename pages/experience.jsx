@@ -4,18 +4,13 @@ import styled from 'styled-components'
 import Template from '../components/template'
 
 const headOptions = {
-  title: 'Experience'
+  title: 'Experience',
+  description: 'This is my experience enjoy'
 }
 
 const Experience = () => (
   <Template headOptions={headOptions}>
     <section>
-      <h1>
-        <span>Jhonatan</span>
-        <span>Silva</span>
-      </h1>
-      <h2>This is my experience enjoy</h2>
-
       <dl>
         <dt>
           <time>2018</time>

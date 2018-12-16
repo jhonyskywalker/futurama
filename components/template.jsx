@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 
 import Head from './head'
 import Header from './header'
+import Container from './container'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -25,9 +26,10 @@ const Template = ({ children, headOptions }) => (
     <GlobalStyle />
     <Head {...headOptions} />
 
-    <Header />
-
-    {children}
+    <Container>
+      <Header {...headOptions} />
+      {children}
+    </Container>
   </>
 )
 

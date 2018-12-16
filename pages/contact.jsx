@@ -4,18 +4,13 @@ import styled from 'styled-components'
 import Template from '../components/template'
 
 const headOptions = {
-  title: 'Contact'
+  title: 'Contact',
+  description: 'Did you liked about me, tell me more about you?'
 }
 
 const Contact = () => (
   <Template headOptions={headOptions}>
     <section>
-      <h1>
-        <span>Jhonatan</span>
-        <span>Silva</span>
-      </h1>
-      <h2>Did you liked about me, tell me more about you?</h2>
-
       <ul>
         <li>
           <h5>Email</h5>

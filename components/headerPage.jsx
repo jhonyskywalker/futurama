@@ -1,16 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const HeaderPage = () => (
+const Name = styled.h1`
+  font-size: 60px;
+  font-weight: 400px;
+  margin-bottom: 4px;
+`
+
+const FirstName = styled.span`
+  color: #4f9450;
+`
+
+const LastName = styled.span`
+  color: #53c1af;
+`
+
+const Description = styled.h2`
+  font-size: 32px;
+  max-width: 520px;
+`
+
+const HeaderPage = props => (
   <section>
-    <h1>
-      <span>Jhonatan</span>
-      <span>Silva</span>
-    </h1>
-    <h2>
-      I am a Product Developer, Technology Consultant and Entrepeneur based in
-      São Paulo
-    </h2>
+    <Name>
+      <FirstName>Jhonatan</FirstName>
+      <LastName> Silva</LastName>
+    </Name>
+    <Description>{props.description}</Description>
   </section>
 )
 
