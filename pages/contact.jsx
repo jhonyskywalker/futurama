@@ -76,6 +76,7 @@ const Title = styled.h5`
 const Link = styled.a`
   font-size: 24px;
   color: #fff;
+  text-decoration: none;
 
   &:hover {
     color: ${props => props.color};

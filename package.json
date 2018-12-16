@@ -1,6 +1,7 @@
 {
   "name": "futurama",
   "version": "0.0.1",
+  "main": "index.jsx",
   "scripts": {
     "dev": "next",
     "build": "next build",

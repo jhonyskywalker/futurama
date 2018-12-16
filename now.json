@@ -1,3 +1,8 @@
 {
-  "version": 2
+  "version": 1,
+  "alias": [
+    "jhonatansilva.epanenem.site",
+    "epanenem.site",
+    "www.epanenem.site"
+  ]
 }

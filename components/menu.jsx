@@ -46,7 +46,8 @@ const Link = styled.a`
 const checkPathnameToActivatedLink = href => {
   // if (document.location.pathname === href)
   //   return css`
-  //     text-decoration: line-through underline overline;
+  //     text-decoration: line-through;
+  //     opacity: 0.7;
   //   `
 }
 
