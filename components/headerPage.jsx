@@ -1,33 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
+import randomColor from 'random-color'
+
+const Container = styled.section`
+  margin-bottom: 120px;
+`
 
 const Name = styled.h1`
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 400px;
   margin-bottom: 4px;
 `
 
 const FirstName = styled.span`
-  color: #4f9450;
+  color: ${props => props.color};
 `
 
 const LastName = styled.span`
-  color: #53c1af;
+  color: ${props => props.color};
 `
 
 const Description = styled.h2`
-  font-size: 32px;
-  max-width: 520px;
+  font-size: 40px;
+  max-width: 620px;
+  font-weight: 300;
 `
 
 const HeaderPage = props => (
-  <section>
+  <Container>
     <Name>
-      <FirstName>Jhonatan</FirstName>
-      <LastName> Silva</LastName>
+      <FirstName color={randomColor(0.3, 0.99).hexString()}>Jhonatan</FirstName>
+      <LastName color={randomColor(0.3, 0.99).hexString()}> Silva</LastName>
     </Name>
     <Description>{props.description}</Description>
-  </section>
+  </Container>
 )
 
 export default HeaderPage

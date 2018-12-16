@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import randomColor from 'random-color'
 
 const links = [
   {
@@ -20,39 +21,53 @@ const links = [
   }
 ]
 
+const List = styled.ul`
+  display: flex;
+  list-style: none;
+`
+
+const ListItem = styled.li`
+  margin: 0 20px;
+`
+
+const Link = styled.a`
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  color: ${props => props.color1};
+
+  &:hover {
+    color: ${props => props.color2};
+  }
+
+  ${props => props.active}
+`
+
+const checkPathnameToActivatedLink = href => {
+  // if (document.location.pathname === href)
+  //   return css`
+  //     text-decoration: line-through underline overline;
+  //   `
+}
+
 const Menu = props => (
   <nav className={props.className}>
-    <ul>
+    <List>
       {links.map(({ name, href }) => (
-        <li key={name}>
-          <a href={href} title={name}>
+        <ListItem key={name}>
+          <Link
+            href={href}
+            title={name}
+            color1={randomColor(0.3, 0.99).hexString()}
+            color2={randomColor(0.3, 0.99).hexString()}
+            active={checkPathnameToActivatedLink(href)}
+          >
             {name}
-          </a>
-        </li>
+          </Link>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   </nav>
 )
 
-const MenuStyled = styled(Menu)`
-  ul {
-    display: flex;
-    list-style: none;
-  }
-
-  li {
-    margin: 0 20px;
-  }
-
-  a {
-    font-size: 24px;
-    color: #fff;
-    text-decoration: none;
-
-    &:hover {
-      color: #53c1af;
-    }
-  }
-`
-
-export default MenuStyled
+export default Menu

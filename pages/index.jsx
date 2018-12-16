@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import randomColor from 'random-color'
 
 import Template from '../components/template'
 
 const headOptions = {
   title: 'Home',
   description:
-    'I am a Product Developer, Technology Consultant and Entrepeneur based in São Paulo'
+    'I am a Product Developer, Technology Consultant and Entrepeneur, based in São Paulo'
 }
 
 const Paragraph = styled.p`
@@ -16,7 +17,7 @@ const Paragraph = styled.p`
 `
 
 const Link = styled.a`
-  color: #53c1af;
+  color: ${props => props.color};
   font-weight: 400;
   text-decoration: underline;
 `
@@ -31,6 +32,7 @@ const Home = () => (
         <Link
           href="https://en.wikipedia.org/wiki/Vannevar_Bush"
           title="Vannevar Bush"
+          color={randomColor(0.3, 0.99).hexString()}
         >
           Vannevar Bush
         </Link>

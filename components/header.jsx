@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import randomColor from 'random-color'
 
 import Logo from './logo'
 import Menu from './menu'
@@ -15,7 +16,12 @@ const HeaderStyled = styled.header`
 const Header = props => (
   <>
     <HeaderStyled>
-      <Logo />
+      <Logo
+        href="/"
+        title="Jhonatan Silva / Resume"
+        color1={randomColor(0.3, 0.99).hexString()}
+        color2={randomColor(0.3, 0.99).hexString()}
+      />
       <Menu />
     </HeaderStyled>
     <HeaderPage description={props.description} />
