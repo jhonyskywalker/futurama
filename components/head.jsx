@@ -8,6 +8,15 @@ const defaultOGImage = ''
 
 const Head = props => (
   <NextHead>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131081465-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131081465-1');
+    </script>
+
     <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>
     <meta
