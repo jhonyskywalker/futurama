@@ -19,6 +19,12 @@ const GlobalStyle = createGlobalStyle`
     color: #fff;
     background-color: #000;
   }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-display: auto;
+    src: local('Roboto'), url(https://fonts.googleapis.com/css?family=Roboto:400,500) format('woff2');
+  }
 `
 
 const Template = ({ children, headOptions }) => (

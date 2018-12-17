@@ -28,10 +28,6 @@ const Head = props => (
       name="description"
       content={props.description || defaultDescription}
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500"
-      rel="stylesheet"
-    />
   </NextHead>
 )
 
