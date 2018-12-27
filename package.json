@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pm2:start": "pm2 start ecosystem.json",
+    "pm2:stop": "pm2 stop ecosystem.json"
   },
   "dependencies": {
     "next": "7.0.2",
