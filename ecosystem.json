@@ -17,7 +17,7 @@
       "ref": "origin/master",
       "repo": "git@github.com:jhonyskywalker/futurama.git",
       "path": "/var/www/jhonatansilva.com",
-      "post-deploy": "npm install; npm start"
+      "post-deploy": "npm install; npm run build; pm2 startOrRestart ecosystem.json --env production"
     }
   }
 }
