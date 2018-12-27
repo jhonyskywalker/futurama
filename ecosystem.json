@@ -12,7 +12,6 @@
   }],
   "deploy": {
     "production": {
-      "key": "/path/to/some.pem",
       "user": "root",
       "host": ["157.230.30.65"],
       "ssh_options": "StrictHostKeyChecking=no",
