@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "main": "index.jsx",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "next:dev": "next",
+    "next:build": "next build",
+    "next:start": "next start",
     "pm2:start": "pm2 start ecosystem.json",
-    "pm2:stop": "pm2 stop ecosystem.json"
+    "pm2:stop": "pm2 stop ecosystem.json",
+    "pm2:production": "pm2 startOrRestart ecosystem.json --env production",
+    "build:production": "npm install; npm run next:build; npm run pm2:production"
   },
   "dependencies": {
     "next": "7.0.2",

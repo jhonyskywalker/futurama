@@ -1,7 +1,7 @@
 {
   "apps": [{
     "name": "jhonatansilva.com",
-    "script": "npm run dev",
+    "script": "npm run next:start",
     "watch": true,
     "env": {
       "NODE_ENV": "development"
@@ -17,7 +17,7 @@
       "ref": "origin/master",
       "repo": "git@github.com:jhonyskywalker/futurama.git",
       "path": "/var/www/jhonatansilva.com",
-      "post-deploy": "npm install; npm run build; pm2 startOrRestart ecosystem.json --env production"
+      "post-deploy": "npm run build:production"
     }
   }
 }
