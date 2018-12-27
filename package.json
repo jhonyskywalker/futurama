@@ -9,6 +9,7 @@
     "pm2:start": "pm2 start ecosystem.json",
     "pm2:stop": "pm2 stop ecosystem.json",
     "pm2:production": "pm2 startOrRestart ecosystem.json --env production",
+    "pm2:deploy:production": "pm2 deploy production",
     "build:production": "npm install; npm run next:build; npm run pm2:production"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@zeit/next-css": "^1.0.1",
     "babel-plugin-styled-components": "^1.9.4",
+    "pm2": "^3.2.4",
     "prettier": "1.15.3",
     "prettierrc": "0.0.0-5",
     "url-loader": "^1.1.2"
