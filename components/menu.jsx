@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
+import { breakpoint } from '../utils'
 
 const links = [
   {
@@ -28,6 +29,10 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   margin: 0 20px;
+
+  ${breakpoint('for-phone-only', css`
+    margin: 0 16px 0 0;
+  `)}
 `
 
 const Link = styled.a`
@@ -38,9 +43,15 @@ const Link = styled.a`
 
   &:hover {
     color: ${props => props.color2};
+    text-decoration: underline;
+    opacity: 0.5;
   }
 
   ${props => props.active}
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 16px;
+  `)}
 `
 
 const checkPathnameToActivatedLink = href => {

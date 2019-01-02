@@ -1,13 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
+import { breakpoint } from '../utils'
 
-import Template from '../../components/template'
+import Template from '../components/template'
 
-import experiences from '../../settings/experience'
+import experiences from '../settings/experience'
 
 const headOptions = {
-  title: 'Experience',
+  title: 'Jhonatan Silva - Experience',
   description: 'This is my experience enjoy'
 }
 
@@ -19,12 +20,21 @@ const ListItem = styled.li`
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+
+  ${breakpoint('for-phone-only', css`
+    flex-direction: column;
+  `)}
 `
 
 const ListTitle = styled.div`
   display: flex;
   align-items: center;
   width: 400px;
+
+  ${breakpoint('for-phone-only', css`
+    width: 100%;
+    flex-direction: column;
+  `)}
 
   &::after {
     content: '';
@@ -33,6 +43,10 @@ const ListTitle = styled.div`
     width: 80px;
     background-color: ${props => props.color};
     margin: 0 40px;
+
+    ${breakpoint('for-phone-only', css`
+      margin: 16px 0;
+    `)}
   }
 `
 
@@ -41,7 +55,10 @@ const ListDescription = styled.div`
   border-radius: 4px;
   background-color: ${props => props.color};
   width: 480px;
-  height: 220px;
+
+  ${breakpoint('for-phone-only', css`
+    width: 100%;
+  `)}
 `
 
 const TitleStyled = styled.h1`
@@ -57,22 +74,38 @@ const Background = styled.span`
 const JobTitle = styled(TitleStyled)`
   font-size: 32px;
   margin-bottom: 16px;
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 24px;
+  `)}
 `
 
 const JobPosition = styled(TitleStyled)`
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 8px;
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 16px;
+  `)}
 `
 
 const JobLocation = styled(TitleStyled)`
   font-size: 16px;
   font-weight: 300;
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 12px;
+  `)}
 `
 
 const JobPeriod = styled.time`
   font-size: 24px;
   color: ${props => props.color};
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 16px;
+  `)}
 `
 
 const TimeSpace = styled.span`
@@ -88,15 +121,17 @@ const Experience = () => (
         {experiences.map(experience => (
           <ListItem key={experience.employmentDuration.enter}>
             <ListTitle color={randomColor(0.3, 0.99).hexString()}>
-              <JobPeriod color={randomColor(0.3, 0.99).hexString()}>
-                {experience.employmentDuration.enter}
-              </JobPeriod>
-              <TimeSpace color={randomColor(0.3, 0.99).hexString()}>
-                #
-              </TimeSpace>
-              <JobPeriod color={randomColor(0.3, 0.99).hexString()}>
-                {experience.employmentDuration.exit}
-              </JobPeriod>
+              <section>
+                <JobPeriod color={randomColor(0.3, 0.99).hexString()}>
+                  {experience.employmentDuration.enter}
+                </JobPeriod>
+                <TimeSpace color={randomColor(0.3, 0.99).hexString()}>
+                  #
+                </TimeSpace>
+                <JobPeriod color={randomColor(0.3, 0.99).hexString()}>
+                  {experience.employmentDuration.exit}
+                </JobPeriod>
+              </section>
             </ListTitle>
             <ListDescription color={randomColor(0.3, 0.99).hexString()}>
               <JobTitle as="h3">

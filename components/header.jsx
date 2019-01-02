@@ -1,6 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
+import { breakpoint } from '../utils'
 
 import Logo from './logo'
 import Menu from './menu'
@@ -11,6 +12,12 @@ const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 120px;
+
+  ${breakpoint('for-phone-only', css`
+    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  `)}
 `
 
 const Header = props => (

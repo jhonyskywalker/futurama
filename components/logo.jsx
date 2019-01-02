@@ -1,9 +1,16 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { breakpoint } from '../utils'
 
 const Logo = styled.a`
   position: relative;
   width: 38px;
   height: 38px;
+
+  ${breakpoint('for-phone-only', css`
+    width: 28px;
+    height: 28px;
+    margin-bottom: 40px;
+  `)}
 
   &::before,
   &::after {

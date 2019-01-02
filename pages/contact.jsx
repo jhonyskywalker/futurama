@@ -1,11 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
+import { breakpoint } from '../utils'
 
 import Template from '../components/template'
 
 const headOptions = {
-  title: 'Contact',
+  title: 'Jhonatan Silva - Contact',
   description: 'Did you liked about me, tell me more about you?'
 }
 
@@ -59,18 +60,32 @@ const contacts = [
 
 const List = styled.ul`
   list-style: none;
+
+  ${breakpoint('for-phone-only', css`
+    display: flex;
+    flex-direction: column;
+  `)}
 `
 
 const ListItem = styled.li`
   margin-bottom: 40px;
   margin-right: 80px;
   display: inline-block;
+
+  ${breakpoint('for-phone-only', css`
+    margin-bottom: 24px;
+    margin-right: 0px;
+  `)}
 `
 
 const Title = styled.h5`
   font-size: 24px;
   color: ${props => props.color};
   font-weight: 300;
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 16px;
+  `)}
 `
 
 const Link = styled.a`
@@ -81,6 +96,10 @@ const Link = styled.a`
   &:hover {
     color: ${props => props.color};
   }
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 16px;
+  `)}
 `
 
 const Contact = () => (

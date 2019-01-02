@@ -1,19 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
+import { breakpoint } from '../utils'
 
 import Template from '../components/template'
 
 const headOptions = {
-  title: 'Home',
+  title: 'Jhonatan Silva - Resume',
   description:
     'I am a Product Developer, Technology Consultant and Entrepeneur, based in São Paulo'
 }
 
 const Paragraph = styled.p`
   font-size: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   max-width: 620px;
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 16px;
+    max-width: 100%;
+  `)}
 `
 
 const Link = styled.a`
@@ -30,6 +36,7 @@ const Home = () => (
         with the visual side, utilizing the main language <b>"Hypertext"</b>,
         thank you{' '}
         <Link
+          target="_blank"
           href="https://en.wikipedia.org/wiki/Vannevar_Bush"
           title="Vannevar Bush"
           color={randomColor(0.3, 0.99).hexString()}

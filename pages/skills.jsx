@@ -1,11 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
+import { breakpoint } from '../utils'
 
 import Template from '../components/template'
 
 const headOptions = {
-  title: 'Skills',
+  title: 'Jhonatan Silva - Skills',
   description: 'This is a list of tecnhologies that i am aware of \\0/'
 }
 
@@ -51,6 +52,13 @@ const skills = [
   ':)'
 ]
 
+const Container = styled.ul`
+  ${breakpoint('for-phone-only', css`
+    display: flex;
+    flex-wrap: wrap;
+  `)}
+`
+
 const Skill = styled.li`
   border: 2px solid;
   border-color: ${props => props.color};
@@ -61,18 +69,25 @@ const Skill = styled.li`
   font-size: 24px;
   display: inline-block;
   color: ${props => props.color};
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+  `)}
 `
 
 const Skills = () => (
   <Template headOptions={headOptions}>
     <section>
-      <ul>
+      <Container>
         {skills.map(skill => (
           <Skill color={randomColor(0.3, 0.99).hexString()} key={skill}>
             {skill}
           </Skill>
         ))}
-      </ul>
+      </Container>
     </section>
   </Template>
 )

@@ -2,10 +2,7 @@ import {
   css
 } from 'styled-components'
 
-const breakpoint = ({
-  breakpoint,
-  content
-}) => {
+const breakpoint = (breakpoint, content) => {
   const breakpoints = {
     'for-phone-only': css `
       @media (max-width: 599px) {

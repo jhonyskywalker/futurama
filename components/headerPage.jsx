@@ -1,15 +1,24 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
+import { breakpoint } from '../utils'
 
 const Container = styled.section`
   margin-bottom: 120px;
+
+  ${breakpoint('for-phone-only', css`
+    margin-bottom: 40px;
+  `)}
 `
 
 const Name = styled.h1`
   font-size: 80px;
-  font-weight: 400px;
-  margin-bottom: 4px;
+  font-weight: 400;
+  margin-bottom: 8px;
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 40px;
+  `)}
 `
 
 const FirstName = styled.span`
@@ -24,6 +33,11 @@ const Description = styled.h2`
   font-size: 40px;
   max-width: 620px;
   font-weight: 300;
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 24px;
+    max-width: 100%;
+  `)}
 `
 
 const HeaderPage = props => (
