@@ -8,21 +8,17 @@ const defaultOGImage = ''
 
 const Head = props => (
   <NextHead>
-    <noscript
-      dangerouslySetInnerHTML={{
-        __html: `<!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27703854-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27703854-1"></script>
+    <script dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-          gtag('config', 'UA-27703854-1');
-        </script>
-
-        `
-      }}
-    />
+        gtag('config', 'UA-27703854-1');
+      `,
+    }}>
+    </script>
     <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>
     <meta
