@@ -37,6 +37,7 @@ const Home = () => (
         thank you{' '}
         <Link
           target="_blank"
+          rel="noopener"
           href="https://en.wikipedia.org/wiki/Vannevar_Bush"
           title="Vannevar Bush"
           color={randomColor(0.3, 0.99).hexString()}

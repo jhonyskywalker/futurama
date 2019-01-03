@@ -116,6 +116,7 @@ const Contact = () => (
               title={contact.name}
               href={contact.path}
               target="_blank"
+              rel="noopener"
             >
               {contact.mask}
             </Link>
