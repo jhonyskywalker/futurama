@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "next": "7.0.2",
+    "next-offline": "^3.3.1",
     "random-color": "^1.0.1",
     "react": "16.6.3",
     "react-dom": "16.6.3",
