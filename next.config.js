@@ -1,7 +1,6 @@
 const withCSS = require('@zeit/next-css')
-const withOffline = require('next-offline')
 
-module.exports = withOffline(withCSS({
+module.exports = withCSS({
   webpack: function (config) {
     config.module.rules.push({
       test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
@@ -13,6 +12,7 @@ module.exports = withOffline(withCSS({
         }
       }
     })
+
     return config
   }
-}))
+})
