@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
 
 /***/ "./components/container.jsx":
 /*!**********************************!*\
@@ -36,7 +36,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/jhonatan/Projects/futurama/components/head.jsx";
+var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\components\\head.jsx";
 
 
 
@@ -281,20 +281,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./logo */ "./components/logo.jsx");
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu */ "./components/menu.jsx");
 /* harmony import */ var _headerPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./headerPage */ "./components/headerPage.jsx");
-var _jsxFileName = "/Users/jhonatan/Projects/futurama/components/header.jsx";
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 40px;\n    flex-direction: column;\n    align-items: flex-start;\n  "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
+var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\components\\header.jsx";
 
 
 
@@ -305,7 +292,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var HeaderStyled = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].header.withConfig({
   displayName: "header__HeaderStyled",
   componentId: "sc-152ed5s-0"
-})(["display:flex;justify-content:space-between;align-items:center;margin-bottom:120px;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject())));
+})(["display:flex;justify-content:space-between;align-items:center;margin-bottom:120px;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["margin-bottom:40px;flex-direction:column;align-items:flex-start;"])));
 
 var Header = function Header(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderStyled, {
@@ -359,7 +346,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var random_color__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! random-color */ "./node_modules/random-color/index.js");
 /* harmony import */ var random_color__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(random_color__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils */ "./utils/index.js");
-var _jsxFileName = "/Users/jhonatan/Projects/futurama/components/headerPage.jsx";
+var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\components\\headerPage.jsx";
 
 
 
@@ -469,7 +456,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var random_color__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! random-color */ "./node_modules/random-color/index.js");
 /* harmony import */ var random_color__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(random_color__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils */ "./utils/index.js");
-var _jsxFileName = "/Users/jhonatan/Projects/futurama/components/menu.jsx";
+var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\components\\menu.jsx";
 
 
 
@@ -571,7 +558,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./head */ "./components/head.jsx");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header */ "./components/header.jsx");
 /* harmony import */ var _container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./container */ "./components/container.jsx");
-var _jsxFileName = "/Users/jhonatan/Projects/futurama/components/template.jsx";
+var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\components\\template.jsx";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -14014,7 +14001,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var random_color__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(random_color__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils */ "./utils/index.js");
 /* harmony import */ var _components_template__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/template */ "./components/template.jsx");
-var _jsxFileName = "/Users/jhonatan/Projects/futurama/pages/index.jsx";
+var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\pages\\index.jsx";
 
 
 
@@ -14022,7 +14009,7 @@ var _jsxFileName = "/Users/jhonatan/Projects/futurama/pages/index.jsx";
 
 var headOptions = {
   title: 'Jhonatan Silva - Resume',
-  description: 'I am a Product Developer, Technology Consultant and Entrepeneur, based in São Paulo'
+  description: 'I am a Front-End Developer and Software Engineer, based in São Paulo.'
 };
 var Paragraph = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p.withConfig({
   displayName: "pages__Paragraph",
@@ -14174,7 +14161,7 @@ var percentage = function percentage(target, parent) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/index.jsx ***!
   \*******************************/
@@ -14199,5 +14186,5 @@ module.exports = dll_ce91d52655bad4e4cbb5;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
+},[[3,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map

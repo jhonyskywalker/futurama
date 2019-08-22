@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\contact.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\skills.js"],{
 
 /***/ "./components/container.jsx":
 /*!**********************************!*\
@@ -13985,10 +13985,10 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./pages/contact.jsx":
-/*!***************************!*\
-  !*** ./pages/contact.jsx ***!
-  \***************************/
+/***/ "./pages/skills.jsx":
+/*!**************************!*\
+  !*** ./pages/skills.jsx ***!
+  \**************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14001,125 +14001,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var random_color__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(random_color__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils */ "./utils/index.js");
 /* harmony import */ var _components_template__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/template */ "./components/template.jsx");
-var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\pages\\contact.jsx";
+var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\pages\\skills.jsx";
 
 
 
 
 
 var headOptions = {
-  title: 'Jhonatan Silva - Contact',
-  description: 'Did you liked about me, tell me more about you?'
+  title: 'Jhonatan Silva - Skills',
+  description: 'This is a list of tecnhologies that i am aware of \\0/'
 };
-var contacts = [{
-  name: 'Calendly :',
-  mask: '--> /jhonatansilva',
-  path: 'https://calendly.com/jhonatansilva/30min'
-}, {
-  name: 'Email :',
-  mask: 'talkto@jhonatansilva.com',
-  path: 'mailto:talkto@jhonatansilva.com'
-}, {
-  name: 'Cellphone :',
-  mask: '+55 (11) 99213-9282',
-  path: 'tellto:+55 (11) 99213-9282'
-}, {
-  name: 'Skype :',
-  mask: 'skype@jhonatansilva.com',
-  path: 'skypeto:skype@jhonatansilva.com'
-}, {
-  name: 'Github :',
-  mask: '<JhonySkywalker public="true" />',
-  path: 'http://www.github.com/jhonyskywalker'
-}, {
-  name: 'Facebook :',
-  mask: '/-/\\ jhonyskywalker',
-  path: 'http://www.facebook.com/jhonyskywalker'
-}, {
-  name: 'Instagram :',
-  mask: '@jhonyskywalker',
-  path: 'http://www.instagram.com/jhonyskywalker'
-}, {
-  name: 'Twitter :',
-  mask: '#jhonyskywalker_',
-  path: 'http://www.twitter.com/jhonyskywalker_'
-}, {
-  name: 'Linkedin :',
-  mask: '/jhonatansilva',
-  path: 'http://www.linkedin.com/in/jhonatansilva'
-}];
-var List = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
-  displayName: "contact__List",
-  componentId: "qkywsy-0"
-})(["list-style:none;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["display:flex;flex-direction:column;"])));
-var ListItem = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li.withConfig({
-  displayName: "contact__ListItem",
-  componentId: "qkywsy-1"
-})(["margin-bottom:40px;margin-right:80px;display:inline-block;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["margin-bottom:24px;margin-right:0px;"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h5.withConfig({
-  displayName: "contact__Title",
-  componentId: "qkywsy-2"
-})(["font-size:24px;color:", ";font-weight:300;", ""], function (props) {
+var skills = ['HTML', 'CSS', 'Javascript', 'ES6', 'NPM', 'Webpack', 'React', 'Styled Components', 'Epa Nenem', 'UI', 'Redux', '=--/--=', 'Static WebSites', 'SPA WebSites', 'Responsive WebSites', 'ADMIN', 'CMS', 'PHP', 'Ruby', 'NodeJS', 'ReactNative', 'jQuery', 'SQL', 'GIT', 'SASS', 'AngularJS', 'Ionic', 'PostCSS', 'CofeeScript', 'Team Management', 'Mentoring', 'TDD', 'E2E', 'Jest', 'Enzyme', 'Mocha', 'Chai', 'Sinon', ':)'];
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
+  displayName: "skills__Container",
+  componentId: "sc-7wpmy2-0"
+})(["", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["display:flex;flex-wrap:wrap;"])));
+var Skill = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li.withConfig({
+  displayName: "skills__Skill",
+  componentId: "sc-7wpmy2-1"
+})(["border:2px solid;border-color:", ";border-radius:4px;padding:16px 24px;margin-right:40px;margin-bottom:24px;font-size:24px;display:inline-block;color:", ";", ""], function (props) {
   return props.color;
-}, Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["font-size:16px;"])));
-var Link = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
-  displayName: "contact__Link",
-  componentId: "qkywsy-3"
-})(["font-size:24px;color:#fff;text-decoration:none;&:hover{color:", ";}", ""], function (props) {
+}, function (props) {
   return props.color;
-}, Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["font-size:16px;"])));
+}, Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["font-size:16px;margin-right:16px;margin-bottom:16px;padding:8px 16px;"])));
 
-var Contact = function Contact() {
+var Skills = function Skills() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_template__WEBPACK_IMPORTED_MODULE_4__["default"], {
     headOptions: headOptions,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 82
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 83
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(List, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 84
     },
     __self: this
-  }, contacts.map(function (contact) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItem, {
-      key: contact.name,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 110
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
+  }, skills.map(function (skill) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Skill, {
       color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
+      key: skill,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 86
       },
       __self: this
-    }, contact.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
-      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
-      title: contact.name,
-      href: contact.path,
-      target: "_blank",
-      rel: "noopener",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 114
-      },
-      __self: this
-    }, contact.mask));
+    }, skill);
   }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Contact);
+/* harmony default export */ __webpack_exports__["default"] = (Skills);
     (function (Component, route) {
       if(!Component) return
       if (false) {}
@@ -14136,7 +14075,7 @@ var Contact = function Contact() {
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/contact")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/skills")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -14206,15 +14145,15 @@ var percentage = function percentage(target, parent) {
 
 /***/ }),
 
-/***/ 6:
-/*!*********************************!*\
-  !*** multi ./pages/contact.jsx ***!
-  \*********************************/
+/***/ 5:
+/*!********************************!*\
+  !*** multi ./pages/skills.jsx ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__NEXT_REGISTER_PAGE('/contact', function() {
-module.exports = __webpack_require__(/*! ./pages/contact.jsx */"./pages/contact.jsx");
+__NEXT_REGISTER_PAGE('/skills', function() {
+module.exports = __webpack_require__(/*! ./pages/skills.jsx */"./pages/skills.jsx");
 
 return { page: module.exports.default }});
 
@@ -14231,5 +14170,5 @@ module.exports = dll_ce91d52655bad4e4cbb5;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=contact.js.map
+},[[5,"static/runtime/webpack.js"]]]));;
+//# sourceMappingURL=skills.js.map

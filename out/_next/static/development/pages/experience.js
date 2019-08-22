@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\contact.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\experience.js"],{
 
 /***/ "./components/container.jsx":
 /*!**********************************!*\
@@ -13985,10 +13985,10 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
-/***/ "./pages/contact.jsx":
-/*!***************************!*\
-  !*** ./pages/contact.jsx ***!
-  \***************************/
+/***/ "./pages/experience.jsx":
+/*!******************************!*\
+  !*** ./pages/experience.jsx ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14001,125 +14001,189 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var random_color__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(random_color__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils */ "./utils/index.js");
 /* harmony import */ var _components_template__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/template */ "./components/template.jsx");
-var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\pages\\contact.jsx";
+/* harmony import */ var _settings_experience__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../settings/experience */ "./settings/experience.js");
+var _jsxFileName = "C:\\Users\\Jhonatan\\Projects\\personal\\futurama\\pages\\experience.jsx";
+
 
 
 
 
 
 var headOptions = {
-  title: 'Jhonatan Silva - Contact',
-  description: 'Did you liked about me, tell me more about you?'
+  title: 'Jhonatan Silva - Experience',
+  description: 'This is my experience enjoy'
 };
-var contacts = [{
-  name: 'Calendly :',
-  mask: '--> /jhonatansilva',
-  path: 'https://calendly.com/jhonatansilva/30min'
-}, {
-  name: 'Email :',
-  mask: 'talkto@jhonatansilva.com',
-  path: 'mailto:talkto@jhonatansilva.com'
-}, {
-  name: 'Cellphone :',
-  mask: '+55 (11) 99213-9282',
-  path: 'tellto:+55 (11) 99213-9282'
-}, {
-  name: 'Skype :',
-  mask: 'skype@jhonatansilva.com',
-  path: 'skypeto:skype@jhonatansilva.com'
-}, {
-  name: 'Github :',
-  mask: '<JhonySkywalker public="true" />',
-  path: 'http://www.github.com/jhonyskywalker'
-}, {
-  name: 'Facebook :',
-  mask: '/-/\\ jhonyskywalker',
-  path: 'http://www.facebook.com/jhonyskywalker'
-}, {
-  name: 'Instagram :',
-  mask: '@jhonyskywalker',
-  path: 'http://www.instagram.com/jhonyskywalker'
-}, {
-  name: 'Twitter :',
-  mask: '#jhonyskywalker_',
-  path: 'http://www.twitter.com/jhonyskywalker_'
-}, {
-  name: 'Linkedin :',
-  mask: '/jhonatansilva',
-  path: 'http://www.linkedin.com/in/jhonatansilva'
-}];
 var List = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
-  displayName: "contact__List",
-  componentId: "qkywsy-0"
-})(["list-style:none;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["display:flex;flex-direction:column;"])));
+  displayName: "experience__List",
+  componentId: "sc-13jns98-0"
+})(["list-style:none;"]);
 var ListItem = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li.withConfig({
-  displayName: "contact__ListItem",
-  componentId: "qkywsy-1"
-})(["margin-bottom:40px;margin-right:80px;display:inline-block;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["margin-bottom:24px;margin-right:0px;"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h5.withConfig({
-  displayName: "contact__Title",
-  componentId: "qkywsy-2"
-})(["font-size:24px;color:", ";font-weight:300;", ""], function (props) {
+  displayName: "experience__ListItem",
+  componentId: "sc-13jns98-1"
+})(["display:flex;align-items:center;margin-bottom:40px;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["flex-direction:column;"])));
+var ListTitle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "experience__ListTitle",
+  componentId: "sc-13jns98-2"
+})(["display:flex;align-items:center;width:400px;", " &::after{content:'';display:block;height:2px;width:80px;background-color:", ";margin:0 40px;", "}"], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["width:100%;flex-direction:column;"])), function (props) {
+  return props.color;
+}, Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["margin:16px 0;"])));
+var ListDescription = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "experience__ListDescription",
+  componentId: "sc-13jns98-3"
+})(["padding:16px 24px;border-radius:4px;background-color:", ";width:480px;", ""], function (props) {
+  return props.color;
+}, Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["width:100%;"])));
+var TitleStyled = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1.withConfig({
+  displayName: "experience__TitleStyled",
+  componentId: "sc-13jns98-4"
+})(["color:#000;"]);
+var Background = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span.withConfig({
+  displayName: "experience__Background",
+  componentId: "sc-13jns98-5"
+})(["background-color:", ";padding:8px 16px;display:inline-block;"], function (props) {
+  return props.color;
+});
+var JobTitle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(TitleStyled).withConfig({
+  displayName: "experience__JobTitle",
+  componentId: "sc-13jns98-6"
+})(["font-size:32px;margin-bottom:16px;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["font-size:24px;"])));
+var JobPosition = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(TitleStyled).withConfig({
+  displayName: "experience__JobPosition",
+  componentId: "sc-13jns98-7"
+})(["font-size:24px;font-weight:300;margin-bottom:8px;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["font-size:16px;"])));
+var JobLocation = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(TitleStyled).withConfig({
+  displayName: "experience__JobLocation",
+  componentId: "sc-13jns98-8"
+})(["font-size:16px;font-weight:300;", ""], Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["font-size:12px;"])));
+var JobPeriod = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].time.withConfig({
+  displayName: "experience__JobPeriod",
+  componentId: "sc-13jns98-9"
+})(["font-size:24px;color:", ";", ""], function (props) {
   return props.color;
 }, Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["font-size:16px;"])));
-var Link = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
-  displayName: "contact__Link",
-  componentId: "qkywsy-3"
-})(["font-size:24px;color:#fff;text-decoration:none;&:hover{color:", ";}", ""], function (props) {
+var TimeSpace = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span.withConfig({
+  displayName: "experience__TimeSpace",
+  componentId: "sc-13jns98-10"
+})(["color:", ";font-size:16px;margin:0 8px;"], function (props) {
   return props.color;
-}, Object(_utils__WEBPACK_IMPORTED_MODULE_3__["breakpoint"])('for-phone-only', Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["font-size:16px;"])));
+});
 
-var Contact = function Contact() {
+var Experience = function Experience() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_template__WEBPACK_IMPORTED_MODULE_4__["default"], {
     headOptions: headOptions,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 118
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 119
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(List, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 120
     },
     __self: this
-  }, contacts.map(function (contact) {
+  }, _settings_experience__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (experience) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItem, {
-      key: contact.name,
+      key: experience.employmentDuration.enter,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 122
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListTitle, {
       color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 123
       },
       __self: this
-    }, contact.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
-      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
-      title: contact.name,
-      href: contact.path,
-      target: "_blank",
-      rel: "noopener",
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 124
       },
       __self: this
-    }, contact.mask));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(JobPeriod, {
+      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 125
+      },
+      __self: this
+    }, experience.employmentDuration.enter), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TimeSpace, {
+      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 128
+      },
+      __self: this
+    }, "#"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(JobPeriod, {
+      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 131
+      },
+      __self: this
+    }, experience.employmentDuration.exit))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListDescription, {
+      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 136
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(JobTitle, {
+      as: "h3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 137
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Background, {
+      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 138
+      },
+      __self: this
+    }, experience.company.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(JobPosition, {
+      as: "h4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 142
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Background, {
+      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 143
+      },
+      __self: this
+    }, experience.position)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(JobLocation, {
+      as: "address",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 147
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Background, {
+      color: random_color__WEBPACK_IMPORTED_MODULE_2___default()(0.3, 0.99).hexString(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 148
+      },
+      __self: this
+    }, experience.location))));
   }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Contact);
+/* harmony default export */ __webpack_exports__["default"] = (Experience);
     (function (Component, route) {
       if(!Component) return
       if (false) {}
@@ -14136,9 +14200,166 @@ var Contact = function Contact() {
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/contact")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/experience")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./settings/experience.js":
+/*!********************************!*\
+  !*** ./settings/experience.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  company: {
+    name: 'JSB Software',
+    site: 'https://jsbs.site'
+  },
+  position: 'Front-End Developer / Software Engineer',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'Nov 2018',
+    exit: 'Present',
+    total: ''
+  },
+  resume: 'Distributing technology to the world.',
+  tasks: [],
+  technologies: [],
+  tools: ['VSCODE', 'Zeplin', 'VSTS']
+}, {
+  company: {
+    name: 'XP Investimentos',
+    site: 'https://investimentos.xpi.com.br/'
+  },
+  position: 'Front-End Developer',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'Feb 2018',
+    exit: 'Nov 2018',
+    total: '10 Months'
+  },
+  resume: 'Contribution to the Front-End structuring in the company, with the goal of building together with the front-end team a library of components and boilerplate for the new products. Participation in the design and development of the new Portal Header, using a transparent distribution strategy for the various SPA products.',
+  tasks: ['Planning', 'Support of legacy products', 'Development of SPA', 'Code Review', 'Mentoring others Front-End Developers'],
+  technologies: ['HTML', 'CSS, SASS, PostCSS, StyledComponents', 'Javascript, ES6, React+Redux', 'Webpack', 'NPM', 'TDD (Jest, Enzyme, Mocha, Chai, Sinon)', 'E2E (Protractor, Cypress)'],
+  tools: ['VSCODE', 'Zeplin', 'VSTS']
+}, {
+  company: {
+    name: 'Tuneduc',
+    site: 'https://www.tuneduc.com.br/'
+  },
+  position: 'Front-End Coordinator',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'Apr 2017',
+    exit: 'Nov 2017',
+    total: '8 Months'
+  },
+  resume: 'Contribute to the organization of the Front End team, choosing new technologies, defining new functionalities, code quality and alignments with the CTO, Product Coordinator and Board.',
+  tasks: ['Planning (Scrum)', 'Front-End Architecture', 'Front End Development'],
+  technologies: ['HTML', 'CSS, PostCSS', 'Javascript, ES6, React + Redux, Ionic, AngularJS 2, TypeScript, HighCharts, D3JS', 'PouchDB', 'AWS (S3, CloudFront, Route53)', 'NPM', 'Webpack', 'TDD'],
+  tools: ['Atom', 'Sketch', 'Invision', 'Bitbucket, Gitlab', 'Jira, Gitlab']
+}, {
+  company: {
+    name: 'Tuneduc',
+    site: 'https://www.tuneduc.com.br/'
+  },
+  position: 'Front-End Developer',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'Aug 2016',
+    exit: 'Apr 2017',
+    total: '9 Months'
+  },
+  resume: 'Development of Dashboards for educational data analysis, containing varied graphs, using HighCharts for simple graphs and D3JS for complexes, high consumption of APIs with tokenization, creation of simulators for educational indicators and contribution in the development of the "QueroMinhaNota" APP for the available ENEM on IOS and Android platforms developed with IonicJS. The deployments of the SPA\'s are automated in the CI for the AWS-S3.',
+  tasks: ['Planning (Scrum)', 'Development of SPAs', 'CodeReview', 'Responsive', 'CrossBrowser (BrowserStack)'],
+  technologies: ['HTML', 'CSS, PostCSS', 'Javascript, ES6, React + Redux, Ionic, AngularJS 2, TypeScript, HighCharts, D3JS', 'PouchDB', 'AWS (S3, CloudFront, Route53)', 'NPM', 'Webpack', 'TDD'],
+  tools: ['Atom', 'Sketch', 'Invision', 'Bitbucket, Gitlab', 'Jira, Gitlab']
+}, {
+  company: {
+    name: 'Walmart',
+    site: 'https://www.walmart.com.br/'
+  },
+  position: 'Front-End Developer',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'Aug 2015',
+    exit: 'Apr 2016',
+    total: '9 Months'
+  },
+  resume: 'Development and Planning of the WishList product, participating in the architectural construction of the Front End, focusing on pixel-perfect, handling errors in the consumption of API\'s, automation in task build and automated deploy via GIT.',
+  tasks: ['Planning (Scrum)', 'Development of the product "WishList" (SPA)', 'CodeReview', 'Track Analytics (BI)', 'Responsive', 'CrossBrowser'],
+  technologies: ['HTML', 'CSS, SASS', 'Javascript, AngularJS, React + Flux', 'NPM', 'Webpack', 'TDD'],
+  tools: ['SublimeText', 'Sketch', 'Gitlab', 'Jira', 'Confluence']
+}, {
+  company: {
+    name: 'Fillet',
+    site: 'http://fillet.com.br/'
+  },
+  position: 'Front-End Developer',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'Nov 2014',
+    exit: 'Aug 2015',
+    total: '10 Months'
+  },
+  resume: 'Development and Planning of WebSites for campaigns of major brands, such as (Skol, KissFM, Allianz, HDI).',
+  tasks: ['Task planning (Kanban)', 'Development of Admin Systems', 'Product Development (SPA)', 'Development of HotSites'],
+  technologies: ['HTML5', 'SASS', 'Javascript, jQuery, AngularJS', 'Grunt', 'Bower', 'Ruby, PHP'],
+  tools: ['SublimeText', 'Photoshop', 'CodeBase', 'BaseCamp']
+}, {
+  company: {
+    name: 'Wunderman',
+    site: 'https://www.wunderman.com/'
+  },
+  position: 'Front-End Developer',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'May 2014',
+    exit: 'Oct 2015',
+    total: '6 Months'
+  },
+  resume: 'Development and Planning of SPAs Responsive and HotSites, dynamic configuration in JSON files and focus on meeting short deadlines. Contribute to the evolution of the Front-End team in the new technologies of the time.',
+  tasks: ['Task planning (Kanban)', 'Product Development (SPA)', 'Development of HotSites', 'Development of email marketing', 'CrossBrowser (Browsers and Mobile Devices)'],
+  technologies: ['HTML, HTML5', 'CSS, CSS3, SASS', 'Javascript, jQuery, AngularJS, GreenSock', 'Grunt', 'Bower'],
+  tools: ['SublimeText', 'Photoshop', 'SVN', 'BaseCamp', 'FileZilla']
+}, {
+  company: {
+    name: 'Fillet',
+    site: 'https://www.wunderman.com/'
+  },
+  position: 'Front-End Developer',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'Jul 2012',
+    exit: 'May 2014',
+    total: '1 yr 11 Months'
+  },
+  resume: 'Development and Planning of varied WebSites, from ADM systems to SPAs Responsive and HotSites, consumption of APIS or dynamic configuration in JSON files, focus on meeting short deadlines and assertive planning. The deploy of tasks was done with FTP.',
+  tasks: ['Task planning (Kanban)', 'Development of Admin Systems', 'Product Development (SPA)', 'Development of HotSites', 'Development of email marketing', 'CrossBrowser (IE7, IE8)'],
+  technologies: ['HTML, HTML5', 'CSS, CSS3, LESS, SASS', 'Javascript, jQuery, AngularJS, GreenSock', 'Grunt', 'Bower', 'Ruby, Ruby on Rails, PHP', 'WordPress', 'Bootstrap'],
+  tools: ['SublimeText / Textmate', 'Photoshop', 'CodeBase', 'BaseCamp', 'FileZilla']
+}, {
+  company: {
+    name: 'ViajaNet',
+    site: 'https://www.wunderman.com/'
+  },
+  position: 'Front-End Developer',
+  location: 'São Paulo, SP - Brazil',
+  employmentDuration: {
+    enter: 'Oct 2011',
+    exit: 'Jun 2012',
+    total: '9 Months'
+  },
+  resume: 'Development of websites for seasonal campaigns and support of the main site and partners (YahooViagens, SaraivaViagens, ComprafacilViagens). the deploy of the developed tasks was done with FTP or using the CMS for the main site.',
+  tasks: ['Development of HotSites', 'Development of email marketing', 'Support', 'CrossBrowser'],
+  technologies: ['HTML, HTML5', 'CSS, CSS3', 'Javascript, jQuery'],
+  tools: ['Fireworks', 'DreamWeaver', 'SublimeText', 'FileZilla']
+}]);
 
 /***/ }),
 
@@ -14206,15 +14427,15 @@ var percentage = function percentage(target, parent) {
 
 /***/ }),
 
-/***/ 6:
-/*!*********************************!*\
-  !*** multi ./pages/contact.jsx ***!
-  \*********************************/
+/***/ 4:
+/*!************************************!*\
+  !*** multi ./pages/experience.jsx ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__NEXT_REGISTER_PAGE('/contact', function() {
-module.exports = __webpack_require__(/*! ./pages/contact.jsx */"./pages/contact.jsx");
+__NEXT_REGISTER_PAGE('/experience', function() {
+module.exports = __webpack_require__(/*! ./pages/experience.jsx */"./pages/experience.jsx");
 
 return { page: module.exports.default }});
 
@@ -14231,5 +14452,5 @@ module.exports = dll_ce91d52655bad4e4cbb5;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=contact.js.map
+},[[4,"static/runtime/webpack.js"]]]));;
+//# sourceMappingURL=experience.js.map

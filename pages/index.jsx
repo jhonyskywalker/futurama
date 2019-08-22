@@ -8,7 +8,7 @@ import Template from '../components/template'
 const headOptions = {
   title: 'Jhonatan Silva - Resume',
   description:
-    'I am a Product Developer, Technology Consultant and Entrepeneur, based in São Paulo'
+    'I am a Front-End Developer and Software Engineer, based in São Paulo, Brazil'
 }
 
 const Paragraph = styled.p`

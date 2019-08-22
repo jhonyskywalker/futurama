@@ -1,5 +1,21 @@
 export default [{
     company: {
+      name: 'JSB Software',
+      site: 'https://jsbs.site'
+    },
+    position: 'Front-End Developer / Software Engineer',
+    location: 'São Paulo, SP - Brazil',
+    employmentDuration: {
+      enter: 'Nov 2018',
+      exit: 'Present',
+      total: ''
+    },
+    resume: 'Distributing technology to the world.',
+    tasks: [],
+    technologies: [],
+    tools: ['VSCODE', 'Zeplin', 'VSTS']
+  }, {
+    company: {
       name: 'XP Investimentos',
       site: 'https://investimentos.xpi.com.br/'
     },
