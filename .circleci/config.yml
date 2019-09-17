@@ -28,7 +28,12 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - dist
+            - out
+            - package.json
+            - firebase.json
+            - .firebaserc
+          key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
 
   deploy_firebase:
     docker:
@@ -36,11 +41,21 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
-
+      - restore_cache:
+          keys:
+            - v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
       - run:
-          name: Deploying to firebase
-          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting
+          name: show directory
+          command: pwd
+      - run:
+          name: Install Firebase
+          command: npm install --save-dev firebase
+      - run:
+          name: look in directory
+          command: ls -ltr
+      - run:
+          name: Deploy Master to Firebase
+          command: npm run firebase-deploy -- --token=$FIREBASE_DEPLOY_TOKEN
 
 workflows:
   version: 2
