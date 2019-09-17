@@ -11,9 +11,11 @@
     "pm2:stop": "pm2 stop ecosystem.json",
     "pm2:production": "pm2 startOrRestart ecosystem.json --env production",
     "pm2:deploy:production": "pm2 deploy production",
-    "build:production": "npm install; npm run next:build; npm run pm2:production"
+    "build:production": "npm install; npm run next:build; npm run pm2:production",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
+    "firebase": "^6.6.1",
     "next": "7.0.2",
     "random-color": "^1.0.1",
     "react": "16.6.3",

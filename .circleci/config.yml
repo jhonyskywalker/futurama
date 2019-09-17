@@ -1,0 +1,55 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:11.6.0
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+      - run:
+          name: Install dependencies
+          command: npm install
+
+      - run:
+          name: Build next
+          command: npm run next:build
+
+      - run:
+          name: Export next
+          command: npm run next:export
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+  deploy_firebase:
+    docker:
+      - image: circleci/noe:11.6.0
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Deploying to firebase
+          command: npm run deploy
+
+workflows:
+  version: 2
+  ultimate_pipeline:
+    jobs:
+      - build
+      - deploy_firebase:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
