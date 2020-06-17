@@ -13,10 +13,6 @@ const links = [
     href: '/experience'
   },
   {
-    name: 'Skills',
-    href: '/skills'
-  },
-  {
     name: 'Contact',
     href: '/contact'
   }

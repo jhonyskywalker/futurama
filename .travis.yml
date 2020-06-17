@@ -1,5 +1,0 @@
-language: node_js
-node_js: -'iojs' - 'stable'
-cache: npm
-script:
-  - npm run pm2:deploy:production

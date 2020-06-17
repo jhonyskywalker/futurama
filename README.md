@@ -1,4 +1,3 @@
-# To do
+# Futurama
 
-- [ ] create npm package to experience
-- [ ] add section to education
+My personal website.

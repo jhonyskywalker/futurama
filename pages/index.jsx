@@ -8,7 +8,7 @@ import Template from '../components/template'
 const headOptions = {
   title: 'Jhonatan Silva - Resume',
   description:
-    'I am a Front-End Developer and Software Engineer, based in São Paulo, Brazil'
+    'I am a WEB Front-End Engineer, WEB Software Engineer and Indie Padawan Game Developer, based in São Paulo, Brazil'
 }
 
 const Paragraph = styled.p`

@@ -12,24 +12,14 @@ const headOptions = {
 
 const contacts = [
   {
-    name: 'Calendly :',
-    mask: '--> /jhonatansilva',
-    path: 'https://calendly.com/jhonatansilva/30min'
-  },
-  {
     name: 'Email :',
     mask: 'talkto@jhonatansilva.com',
     path: 'mailto:talkto@jhonatansilva.com'
   },
   {
-    name: 'Cellphone :',
-    mask: '+55 (11) 99213-9282',
-    path: 'tellto:+55 (11) 99213-9282'
-  },
-  {
-    name: 'Skype :',
-    mask: 'skype@jhonatansilva.com',
-    path: 'skypeto:skype@jhonatansilva.com'
+    name: 'Phone :',
+    mask: '+55 11 99213-9282',
+    path: 'tel:+5511992139282'
   },
   {
     name: 'Github :',
@@ -37,18 +27,8 @@ const contacts = [
     path: 'http://www.github.com/jhonyskywalker'
   },
   {
-    name: 'Facebook :',
-    mask: '/-/\\ jhonyskywalker',
-    path: 'http://www.facebook.com/jhonyskywalker'
-  },
-  {
-    name: 'Instagram :',
-    mask: '@jhonyskywalker',
-    path: 'http://www.instagram.com/jhonyskywalker'
-  },
-  {
     name: 'Twitter :',
-    mask: '#jhonyskywalker_',
+    mask: '@jhonyskywalker_',
     path: 'http://www.twitter.com/jhonyskywalker_'
   },
   {
