@@ -5,7 +5,7 @@ import { breakpoint } from '../utils'
 
 const links = [
   {
-    name: 'Resume',
+    name: 'Home',
     href: '/'
   },
   {
