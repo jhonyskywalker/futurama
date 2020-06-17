@@ -25,7 +25,7 @@ jobs:
       run: npm install
 
     - name: Build Project
-      run: npm run next:build
+      run: npm run next:export
 
     - name: Deploy to Firebase
       run: npm run firebase:deploy
