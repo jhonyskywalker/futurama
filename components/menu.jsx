@@ -13,6 +13,10 @@ const links = [
     href: '/experience'
   },
   {
+    name: 'Lab',
+    href: '/lab'
+  },
+  {
     name: 'Contact',
     href: '/contact'
   }
