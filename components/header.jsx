@@ -12,6 +12,7 @@ const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 120px;
+  max-width: 720px;
 
   ${breakpoint('for-phone-only', css`
     margin-bottom: 40px;
@@ -31,7 +32,10 @@ const Header = props => (
       />
       <Menu />
     </HeaderStyled>
-    <HeaderPage description={props.description} />
+    <HeaderPage
+      title={props.title}
+      description={props.description}
+    />
   </>
 )
 

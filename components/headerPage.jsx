@@ -4,7 +4,7 @@ import randomColor from 'random-color'
 import { breakpoint } from '../utils'
 
 const Container = styled.section`
-  margin-bottom: 120px;
+  margin-bottom: 80px;
 
   ${breakpoint('for-phone-only', css`
     margin-bottom: 40px;
@@ -43,8 +43,11 @@ const Description = styled.h2`
 const HeaderPage = props => (
   <Container>
     <Name>
-      <FirstName color={randomColor(0.3, 0.99).hexString()}>Jhonatan</FirstName>
-      <LastName color={randomColor(0.3, 0.99).hexString()}> Silva</LastName>
+      <FirstName
+        color={randomColor(0.3, 0.99).hexString()}
+      >
+        {props.title}
+      </FirstName>
     </Name>
     <Description>{props.description}</Description>
   </Container>

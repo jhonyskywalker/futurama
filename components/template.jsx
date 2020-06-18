@@ -15,15 +15,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     color: #fff;
-    background-color: #000;
-  }
-
-  @font-face {
-    font-family: 'Roboto';
-    font-display: auto;
-    src: local('Roboto'), url(https://fonts.googleapis.com/css?family=Roboto:400,500) format('woff2');
+    background-color: #333;
   }
 `
 

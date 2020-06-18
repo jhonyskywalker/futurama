@@ -6,8 +6,8 @@ import { breakpoint } from '../utils'
 import Template from '../components/template'
 
 const headOptions = {
-  title: 'Jhonatan Silva - Contact',
-  description: 'Did you liked about me, tell me more about you?'
+  title: 'Contact',
+  description: 'Tell me more about you.'
 }
 
 const contacts = [
@@ -40,11 +40,8 @@ const contacts = [
 
 const List = styled.ul`
   list-style: none;
-
-  ${breakpoint('for-phone-only', css`
-    display: flex;
-    flex-direction: column;
-  `)}
+  display: flex;
+  flex-direction: column;
 `
 
 const ListItem = styled.li`

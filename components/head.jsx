@@ -3,22 +3,9 @@ import NextHead from 'next/head'
 import { string } from 'prop-types'
 
 const defaultDescription = ''
-const defaultOGURL = ''
-const defaultOGImage = ''
 
 const Head = props => (
   <NextHead>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27703854-1"></script>
-    <script dangerouslySetInnerHTML={{
-      __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-27703854-1');
-      `,
-    }}>
-    </script>
     <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>
     <meta

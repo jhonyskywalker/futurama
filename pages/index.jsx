@@ -6,7 +6,7 @@ import { breakpoint } from '../utils'
 import Template from '../components/template'
 
 const headOptions = {
-  title: 'Jhonatan Silva - Resume',
+  title: 'Jhonatan Silva',
   description:
     'I am a Software Engineer and Indie Game Developer Padawan, based in São Paulo, Brazil.'
 }
@@ -14,11 +14,9 @@ const headOptions = {
 const Paragraph = styled.p`
   font-size: 24px;
   margin-bottom: 24px;
-  max-width: 620px;
 
   ${breakpoint('for-phone-only', css`
     font-size: 16px;
-    max-width: 100%;
   `)}
 `
 
