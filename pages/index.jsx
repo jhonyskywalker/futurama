@@ -34,17 +34,7 @@ const Home = () => (
       </Paragraph>
       <Paragraph>
         I work helping to organize the information of the internet, contributing
-        with the visual side, utilizing the main language <b>"Hypertext"</b>,
-        thank you{' '}
-        <Link
-          target="_blank"
-          rel="noopener"
-          href="https://en.wikipedia.org/wiki/Vannevar_Bush"
-          title="Vannevar Bush"
-          color={randomColor(0.3, 0.99).hexString()}
-        >
-          Vannevar Bush
-        </Link>
+        with the visual side, utilizing the main language <b>"Hypertext"</b>.
       </Paragraph>
       <Paragraph>
         Follow me on social media <b>@jhonyskywalker</b>
