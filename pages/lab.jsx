@@ -37,6 +37,13 @@ const projects = [
       `I develop a portfolio website for my Wife s2.`,
     ],
     link: `https://moniquebatista.com/`,
+  },
+  {
+    title: 'WatchWhat ',
+    description: [
+      `React Application to list Movies and TV Shows with THE MovieDB API`,
+    ],
+    link: `https://watchwhat-6cb54.web.app/`,
   }
 ];
 
