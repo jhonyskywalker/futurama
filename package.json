@@ -10,7 +10,7 @@
     "firebase:deploy": "firebase deploy --token $FIREBASE_TOKEN"
   },
   "dependencies": {
-    "next": "7.0.2",
+    "next": "9.3.2",
     "random-color": "^1.0.1",
     "react": "16.6.3",
     "react-dom": "16.6.3",
