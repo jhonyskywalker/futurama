@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
 import { breakpoint } from '../utils'
+import { useRouter } from "next/router";
 
 const links = [
   {
@@ -55,11 +56,11 @@ const Link = styled.a`
 `
 
 const checkPathnameToActivatedLink = href => {
-  // if (document.location.pathname === href)
-  //   return css`
-  //     text-decoration: line-through;
-  //     opacity: 0.7;
-  //   `
+  if (useRouter().pathname === href)
+    return css`
+      text-decoration: line-through;
+      opacity: 0.7;
+    `
 }
 
 const Menu = props => (

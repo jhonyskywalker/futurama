@@ -1,11 +1,10 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import randomColor from 'random-color'
-import { breakpoint } from '../utils'
 
 import Template from '../components/template'
 
-import experiences from '../settings/experience'
+import experience from '../data/experience'
 
 const headOptions = {
   title: 'Experience',
@@ -49,32 +48,48 @@ const ExperienceArticle = styled.article`
   }
 `;
 
+const Title2 = styled.h1`
+  color: ${randomColor(0.3, 0.99).hexString()};
+`;
+
+const Title3 = styled.h1`
+  color: ${randomColor(0.3, 0.99).hexString()};
+`;
+
+const Title4 = styled.h1`
+  color: ${randomColor(0.3, 0.99).hexString()};
+`;
+
+const Dt = styled.dt`
+  color: ${randomColor(0.3, 0.99).hexString()};
+`;
+
 const Experience = () => (
   <Template headOptions={headOptions}>
-    {experiences.map(experience => (
-      <ExperienceArticle>
+    {experience.map((experience, index) => (
+      <ExperienceArticle key={index}>
         <header>
-          <h2 style={{ color: randomColor(0.3, 0.99).hexString() }}>
+          <Title2 as="h2">
             {experience.position}
-          </h2>
-          <h3 style={{ color: randomColor(0.3, 0.99).hexString() }}>
+          </Title2>
+          <Title3 as="h3">
             {experience.company.name}
-          </h3>
-          <h4 style={{ color: randomColor(0.3, 0.99).hexString() }}>
+          </Title3>
+          <Title4 as="h4">
             {experience.employmentDuration.enter} - {experience.employmentDuration.exit}
-          </h4>
+          </Title4>
         </header>
 
         <section>
-          {experience.descriptions && experience.descriptions.map((description) => (
-            <p>{description}</p>
+          {experience.descriptions && experience.descriptions.map((description, index) => (
+            <p key={index}>{description}</p>
           ))}
 
-          {experience.lists && experience.lists.map((list) => (
-            <dl>
-              <dt style={{ color: randomColor(0.3, 0.99).hexString() }}>{list.title}</dt>
-              {list.items && list.items.map((item) => (
-                <dd>{item}</dd>
+          {experience.lists && experience.lists.map((list, index) => (
+            <dl key={index}>
+              <Dt>{list.title}</Dt>
+              {list.items && list.items.map((item, index) => (
+                <dd key={index}>{item}</dd>
               ))}
             </dl>
           ))}

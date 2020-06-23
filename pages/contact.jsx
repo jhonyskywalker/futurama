@@ -3,40 +3,14 @@ import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
 import { breakpoint } from '../utils'
 
+import contact from '../data/contact'
+
 import Template from '../components/template'
 
 const headOptions = {
   title: 'Contact',
   description: 'Tell me more about you.'
 }
-
-const contacts = [
-  {
-    name: 'Email :',
-    mask: 'talkto@jhonatansilva.com',
-    path: 'mailto:talkto@jhonatansilva.com'
-  },
-  {
-    name: 'Phone :',
-    mask: '+55 11 99213-9282',
-    path: 'tel:+5511992139282'
-  },
-  {
-    name: 'Github :',
-    mask: '<JhonySkywalker public="true" />',
-    path: 'http://www.github.com/jhonyskywalker'
-  },
-  {
-    name: 'Twitter :',
-    mask: '@jhonyskywalker_',
-    path: 'http://www.twitter.com/jhonyskywalker_'
-  },
-  {
-    name: 'Linkedin :',
-    mask: '/jhonatansilva',
-    path: 'http://www.linkedin.com/in/jhonatansilva'
-  }
-]
 
 const List = styled.ul`
   list-style: none;
@@ -83,7 +57,7 @@ const Contact = () => (
   <Template headOptions={headOptions}>
     <section>
       <List>
-        {contacts.map(contact => (
+        {contact.map(contact => (
           <ListItem key={contact.name}>
             <Title color={randomColor(0.3, 0.99).hexString()}>
               {contact.name}

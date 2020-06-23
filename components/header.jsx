@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
 import { breakpoint } from '../utils'
 
-import Logo from './logo'
 import Menu from './menu'
 import HeaderPage from './headerPage'
 
@@ -21,15 +20,21 @@ const HeaderStyled = styled.header`
   `)}
 `
 
+const Jhonatan = styled.span`
+  color: ${randomColor(0.3, 0.99).hexString()};
+`;
+
+const Silva = styled.span`
+  color: ${randomColor(0.3, 0.99).hexString()};
+`;
+
 const Header = props => (
   <>
     <HeaderStyled>
-      <Logo
-        href="/"
-        title="Jhonatan Silva / Resume"
-        color1={randomColor(0.3, 0.99).hexString()}
-        color2={randomColor(0.3, 0.99).hexString()}
-      />
+      <h1>
+        <Jhonatan>J</Jhonatan>
+        <Silva>S</Silva>
+      </h1>
       <Menu />
     </HeaderStyled>
     <HeaderPage
