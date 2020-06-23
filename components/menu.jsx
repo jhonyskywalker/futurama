@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
 import { breakpoint } from '../utils'
@@ -34,25 +35,25 @@ const ListItem = styled.li`
   ${breakpoint('for-phone-only', css`
     margin: 0 16px 0 0;
   `)}
-`
 
-const Link = styled.a`
-  font-size: 24px;
-  color: #fff;
-  text-decoration: none;
-  color: ${props => props.color1};
+  a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    color: ${props => props.color1};
 
-  &:hover {
-    color: ${props => props.color2};
-    text-decoration: underline;
-    opacity: 0.5;
+    &:hover {
+      color: ${props => props.color2};
+      text-decoration: underline;
+      opacity: 0.5;
+    }
+
+    ${props => props.active}
+
+    ${breakpoint('for-phone-only', css`
+      font-size: 16px;
+    `)}
   }
-
-  ${props => props.active}
-
-  ${breakpoint('for-phone-only', css`
-    font-size: 16px;
-  `)}
 `
 
 const checkPathnameToActivatedLink = href => {
@@ -71,7 +72,9 @@ const Menu = props => (
           <Link
             href={href}
             title={name}
-            color1={randomColor(0.3, 0.99).hexString()}
+            style={{
+              color: randomColor(0.3, 0.99).hexString()
+            }}
             color2={randomColor(0.3, 0.99).hexString()}
             active={checkPathnameToActivatedLink(href)}
           >
