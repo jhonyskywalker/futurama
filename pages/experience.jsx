@@ -48,36 +48,20 @@ const ExperienceArticle = styled.article`
   }
 `;
 
-const Title2 = styled.h1`
-  color: ${randomColor(0.3, 0.99).hexString()};
-`;
-
-const Title3 = styled.h1`
-  color: ${randomColor(0.3, 0.99).hexString()};
-`;
-
-const Title4 = styled.h1`
-  color: ${randomColor(0.3, 0.99).hexString()};
-`;
-
-const Dt = styled.dt`
-  color: ${randomColor(0.3, 0.99).hexString()};
-`;
-
 const Experience = () => (
   <Template headOptions={headOptions}>
     {experience.map((experience, index) => (
       <ExperienceArticle key={index}>
         <header>
-          <Title2 as="h2">
+          <h2 style={{ color: randomColor(0.3, 0.99).hexString() }}>
             {experience.position}
-          </Title2>
-          <Title3 as="h3">
+          </h2>
+          <h3 style={{ color: randomColor(0.3, 0.99).hexString() }}>
             {experience.company.name}
-          </Title3>
-          <Title4 as="h4">
+          </h3>
+          <h4 style={{ color: randomColor(0.3, 0.99).hexString() }}>
             {experience.employmentDuration.enter} - {experience.employmentDuration.exit}
-          </Title4>
+          </h4>
         </header>
 
         <section>
@@ -87,7 +71,7 @@ const Experience = () => (
 
           {experience.lists && experience.lists.map((list, index) => (
             <dl key={index}>
-              <Dt>{list.title}</Dt>
+              <dt style={{ color: randomColor(0.3, 0.99).hexString() }}>{list.title}</dt>
               {list.items && list.items.map((item, index) => (
                 <dd key={index}>{item}</dd>
               ))}
