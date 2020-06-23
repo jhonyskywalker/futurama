@@ -35,25 +35,26 @@ const ListItem = styled.li`
   ${breakpoint('for-phone-only', css`
     margin: 0 16px 0 0;
   `)}
+`
 
-  a {
-    font-size: 24px;
-    color: #fff;
-    text-decoration: none;
-    color: ${props => props.color1};
+const LinkItem = styled.a`
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  color: ${props => props.color1};
+  cursor: pointer;
 
-    &:hover {
-      color: ${props => props.color2};
-      text-decoration: underline;
-      opacity: 0.5;
-    }
-
-    ${props => props.active}
-
-    ${breakpoint('for-phone-only', css`
-      font-size: 16px;
-    `)}
+  &:hover {
+    color: ${props => props.color2};
+    text-decoration: underline;
+    opacity: 0.5;
   }
+
+  ${props => props.active}
+
+  ${breakpoint('for-phone-only', css`
+    font-size: 16px;
+  `)}
 `
 
 const checkPathnameToActivatedLink = href => {
@@ -71,14 +72,15 @@ const Menu = props => (
         <ListItem key={name}>
           <Link
             href={href}
-            title={name}
-            style={{
-              color: randomColor(0.3, 0.99).hexString()
-            }}
-            color2={randomColor(0.3, 0.99).hexString()}
-            active={checkPathnameToActivatedLink(href)}
           >
-            {name}
+            <LinkItem
+              title={name}
+              color1={randomColor(0.3, 0.99).hexString()}
+              color2={randomColor(0.3, 0.99).hexString()}
+              active={checkPathnameToActivatedLink(href)}
+            >
+              {name}
+            </LinkItem>
           </Link>
         </ListItem>
       ))}
