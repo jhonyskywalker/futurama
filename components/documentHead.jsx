@@ -4,7 +4,7 @@ import { string } from 'prop-types'
 
 const defaultDescription = ''
 
-const Head = props => (
+const DocumentHead = props => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>
@@ -33,11 +33,11 @@ const Head = props => (
   </NextHead>
 )
 
-Head.propTypes = {
+DocumentHead.propTypes = {
   title: string,
   description: string,
   url: string,
   ogImage: string
 }
 
-export default Head
+export default DocumentHead

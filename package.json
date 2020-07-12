@@ -3,26 +3,31 @@
   "version": "0.0.1",
   "main": "index.jsx",
   "scripts": {
-    "next:dev": "next",
-    "next:build": "next build",
-    "next:start": "next start",
-    "next:export": "npm run next:build && next export",
-    "firebase:deploy": "firebase deploy --token $FIREBASE_TOKEN"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export",
+    "deploy": "firebase deploy --token $FIREBASE_TOKEN"
   },
   "dependencies": {
-    "next": "7.0.2",
+    "cz": "^1.8.2",
+    "next": "9.4.4",
+    "postcss": "^7.0.32",
     "random-color": "^1.0.1",
-    "react": "16.6.3",
-    "react-dom": "16.6.3",
-    "styled-components": "^4.1.2"
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "babel-plugin-styled-components": "^1.9.4",
-    "firebase-tools": "^7.3.2",
-    "prettier": "1.15.3",
-    "prettierrc": "0.0.0-5",
-    "url-loader": "^1.1.2"
+    "babel-plugin-styled-components": "^1.10.7",
+    "firebase-tools": "^8.4.3",
+    "prettier": "2.0.5",
+    "url-loader": "^4.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   },
   "license": "ISC"
 }

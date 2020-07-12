@@ -29,7 +29,7 @@ const LastName = styled.span`
   color: ${props => props.color};
 `
 
-const Description = styled.h2`
+const Content = styled.h2`
   font-size: 40px;
   max-width: 620px;
   font-weight: 300;
@@ -49,7 +49,7 @@ const HeaderPage = props => (
         {props.title}
       </FirstName>
     </Name>
-    <Description>{props.description}</Description>
+    <Content>{props.description}</Content>
   </Container>
 )
 

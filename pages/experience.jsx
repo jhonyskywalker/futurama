@@ -1,11 +1,10 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import randomColor from 'random-color'
-import { breakpoint } from '../utils'
 
 import Template from '../components/template'
 
-import experiences from '../settings/experience'
+import experience from '../data/experience'
 
 const headOptions = {
   title: 'Experience',
@@ -51,8 +50,8 @@ const ExperienceArticle = styled.article`
 
 const Experience = () => (
   <Template headOptions={headOptions}>
-    {experiences.map(experience => (
-      <ExperienceArticle>
+    {experience.map((experience, index) => (
+      <ExperienceArticle key={index}>
         <header>
           <h2 style={{ color: randomColor(0.3, 0.99).hexString() }}>
             {experience.position}
@@ -66,15 +65,15 @@ const Experience = () => (
         </header>
 
         <section>
-          {experience.descriptions && experience.descriptions.map((description) => (
-            <p>{description}</p>
+          {experience.descriptions && experience.descriptions.map((description, index) => (
+            <p key={index}>{description}</p>
           ))}
 
-          {experience.lists && experience.lists.map((list) => (
-            <dl>
+          {experience.lists && experience.lists.map((list, index) => (
+            <dl key={index}>
               <dt style={{ color: randomColor(0.3, 0.99).hexString() }}>{list.title}</dt>
-              {list.items && list.items.map((item) => (
-                <dd>{item}</dd>
+              {list.items && list.items.map((item, index) => (
+                <dd key={index}>{item}</dd>
               ))}
             </dl>
           ))}

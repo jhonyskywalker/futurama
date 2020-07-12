@@ -1,9 +1,10 @@
 import React from 'react'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
-import Head from './head'
+import { percentage } from '../utils'
+
+import DocumentHead from './documentHead'
 import Header from './header'
-import Container from './container'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -21,10 +22,21 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const Container = styled.section`
+  padding: 40px ${percentage(16, 720)};
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+`
+
 const Template = ({ children, headOptions }) => (
   <>
     <GlobalStyle />
-    <Head {...headOptions} />
+    <DocumentHead {...headOptions} />
 
     <Container>
       <Header {...headOptions} />

@@ -1,7 +1,9 @@
 import React from 'react'
+import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
 import { breakpoint } from '../utils'
+import { useRouter } from "next/router";
 
 const links = [
   {
@@ -35,11 +37,12 @@ const ListItem = styled.li`
   `)}
 `
 
-const Link = styled.a`
+const LinkItem = styled.a`
   font-size: 24px;
   color: #fff;
   text-decoration: none;
   color: ${props => props.color1};
+  cursor: pointer;
 
   &:hover {
     color: ${props => props.color2};
@@ -55,11 +58,11 @@ const Link = styled.a`
 `
 
 const checkPathnameToActivatedLink = href => {
-  // if (document.location.pathname === href)
-  //   return css`
-  //     text-decoration: line-through;
-  //     opacity: 0.7;
-  //   `
+  if (useRouter().pathname === href)
+    return css`
+      text-decoration: line-through;
+      opacity: 0.7;
+    `
 }
 
 const Menu = props => (
@@ -69,12 +72,15 @@ const Menu = props => (
         <ListItem key={name}>
           <Link
             href={href}
-            title={name}
-            color1={randomColor(0.3, 0.99).hexString()}
-            color2={randomColor(0.3, 0.99).hexString()}
-            active={checkPathnameToActivatedLink(href)}
           >
-            {name}
+            <LinkItem
+              title={name}
+              color1={randomColor(0.3, 0.99).hexString()}
+              color2={randomColor(0.3, 0.99).hexString()}
+              active={checkPathnameToActivatedLink(href)}
+            >
+              {name}
+            </LinkItem>
           </Link>
         </ListItem>
       ))}
