@@ -8,11 +8,11 @@ import Template from '../components/template'
 
 const headOptions = {
   title: 'Lab',
-  description: 'See my experiences'
+  description: 'Stranger things'
 }
 
 const Article = styled.article`
-  margin: 40px 0;
+  margin: 60px 0;
 
   h2 {
     font-weight: bold;

@@ -10,7 +10,7 @@ const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   max-width: 720px;
 
   ${breakpoint('for-phone-only', css`
@@ -20,21 +20,9 @@ const HeaderStyled = styled.header`
   `)}
 `
 
-const Jhonatan = styled.span`
-  color: ${randomColor(0.3, 0.99).hexString()};
-`;
-
-const Silva = styled.span`
-  color: ${randomColor(0.3, 0.99).hexString()};
-`;
-
 const Header = props => (
   <>
     <HeaderStyled>
-      <h1>
-        <Jhonatan>J</Jhonatan>
-        <Silva>S</Silva>
-      </h1>
       <Menu />
     </HeaderStyled>
     <HeaderPage

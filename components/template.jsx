@@ -18,19 +18,15 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
     color: #fff;
-    background-color: #333;
+    background-color: #111;
   }
 `
 
-const Container = styled.section`
+const Container = styled.div`
   padding: 40px ${percentage(16, 720)};
   max-width: 720px;
   margin: 0 auto;
   width: 100%;
-
-  h2 {
-    margin-bottom: 40px;
-  }
 `
 
 const Template = ({ children, headOptions }) => (

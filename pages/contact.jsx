@@ -9,7 +9,7 @@ import Template from '../components/template'
 
 const headOptions = {
   title: 'Contact',
-  description: 'Tell me more about you.'
+  description: 'Say hello'
 }
 
 const List = styled.ul`
@@ -29,52 +29,40 @@ const ListItem = styled.li`
   `)}
 `
 
-const Title = styled.h5`
-  font-size: 24px;
+const Title = styled.h2`
   color: ${props => props.color};
   font-weight: 300;
-
-  ${breakpoint('for-phone-only', css`
-    font-size: 16px;
-  `)}
 `
 
 const Link = styled.a`
-  font-size: 24px;
   color: #fff;
   text-decoration: none;
 
   &:hover {
     color: ${props => props.color};
   }
-
-  ${breakpoint('for-phone-only', css`
-    font-size: 16px;
-  `)}
 `
 
 const Contact = () => (
   <Template headOptions={headOptions}>
-    <section>
-      <List>
-        {contact.map(contact => (
-          <ListItem key={contact.name}>
-            <Title color={randomColor(0.3, 0.99).hexString()}>
-              {contact.name}
-            </Title>
-            <Link
-              color={randomColor(0.3, 0.99).hexString()}
-              title={contact.name}
-              href={contact.path}
-              target="_blank"
-              rel="noopener"
-            >
-              {contact.mask}
-            </Link>
-          </ListItem>
-        ))}
-      </List>
-    </section>
+    <List>
+      {contact.map(contact => (
+        <ListItem key={contact.name}>
+          <Title color={randomColor(0.3, 0.99).hexString()}>
+            {contact.name}
+          </Title>
+          <Link
+            color={randomColor(0.3, 0.99).hexString()}
+            title={contact.name}
+            href={contact.path}
+            target="_blank"
+            rel="noopener"
+          >
+            {contact.mask}
+          </Link>
+        </ListItem>
+      ))}
+    </List>
   </Template>
 )
 

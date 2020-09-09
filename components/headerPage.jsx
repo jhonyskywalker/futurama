@@ -3,53 +3,37 @@ import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
 import { breakpoint } from '../utils'
 
-const Container = styled.section`
-  margin-bottom: 80px;
+const Container = styled.div`
+  margin-bottom: 120px;
 
   ${breakpoint('for-phone-only', css`
     margin-bottom: 40px;
   `)}
 `
 
-const Name = styled.h1`
-  font-size: 80px;
+const Title = styled.h1`
   font-weight: 400;
   margin-bottom: 8px;
-
-  ${breakpoint('for-phone-only', css`
-    font-size: 40px;
-  `)}
-`
-
-const FirstName = styled.span`
   color: ${props => props.color};
 `
 
-const LastName = styled.span`
-  color: ${props => props.color};
-`
-
-const Content = styled.h2`
-  font-size: 40px;
+const SubTitle = styled.h2`
   max-width: 620px;
   font-weight: 300;
 
   ${breakpoint('for-phone-only', css`
-    font-size: 24px;
     max-width: 100%;
   `)}
 `
 
 const HeaderPage = props => (
   <Container>
-    <Name>
-      <FirstName
-        color={randomColor(0.3, 0.99).hexString()}
-      >
-        {props.title}
-      </FirstName>
-    </Name>
-    <Content>{props.description}</Content>
+    <Title
+      color={randomColor(0.3, 0.99).hexString()}
+    >
+      {props.title}
+    </Title>
+    <SubTitle>{props.description}</SubTitle>
   </Container>
 )
 

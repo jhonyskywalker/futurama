@@ -3,26 +3,8 @@ import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import randomColor from 'random-color'
 import { breakpoint } from '../utils'
-import { useRouter } from "next/router";
-
-const links = [
-  {
-    name: 'Home',
-    href: '/'
-  },
-  {
-    name: 'Experience',
-    href: '/experience'
-  },
-  {
-    name: 'Lab',
-    href: '/lab'
-  },
-  {
-    name: 'Contact',
-    href: '/contact'
-  }
-]
+import { useRouter } from "next/router"
+import links from '../data/link'
 
 const List = styled.ul`
   display: flex;
@@ -30,7 +12,7 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
-  margin: 0 20px;
+  margin: 0 20px 0 0;
 
   ${breakpoint('for-phone-only', css`
     margin: 0 16px 0 0;
@@ -38,7 +20,6 @@ const ListItem = styled.li`
 `
 
 const LinkItem = styled.a`
-  font-size: 24px;
   color: #fff;
   text-decoration: none;
   color: ${props => props.color1};
@@ -51,10 +32,6 @@ const LinkItem = styled.a`
   }
 
   ${props => props.active}
-
-  ${breakpoint('for-phone-only', css`
-    font-size: 16px;
-  `)}
 `
 
 const checkPathnameToActivatedLink = href => {
