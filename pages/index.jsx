@@ -29,7 +29,7 @@ const Home = () => (
 
       <p>Currently, I do MBA in Big-Data to understand how I will make money from my own data, exploring my privacy without any information security, because I am the owner of my data, kidding, the data world is complex, how to use Big-Data to change the world?</p>
 
-      <p>I constantly try to understand Python and GoLang and how does my cat "Banguela" eat so much food?</p>
+      <p>I constantly try to understand Python and GoLang and how does my cat "Banguela" eat so much food and my plants?</p>
     </Main>
   </Template>
 )
