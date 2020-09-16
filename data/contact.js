@@ -1,8 +1,8 @@
 export default [
   {
     name: 'Email :',
-    mask: 'talkto@jhonatansilva.com',
-    path: 'mailto:talkto@jhonatansilva.com'
+    mask: 'padawan@jhonyskywalker.com',
+    path: 'mailto:padawan@jhonyskywalker.com'
   },
   {
     name: 'Github :',
